@@ -11,4 +11,12 @@ public class TrashFall : MonoBehaviour {
 
 	}
 
+	void OnTriggerEnter2D(Collider2D collider){
+
+		if(collider.name == "Player"){
+			collider.GetComponent<PlayerMovement>().OutOfControl(transform);
+		}
+
+	}
+
 }
