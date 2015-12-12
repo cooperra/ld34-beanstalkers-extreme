@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PlayerMovement : MainBehaviour {
 
-	public float PlayerInput = 0.0f;
 	public float HorizontalSpeed = 2.0f;
 	public float MaxHorizontalSpeed = 5.0f;
 	public float VerticalSpeed = 5.0f;
@@ -15,23 +14,26 @@ public class PlayerMovement : MainBehaviour {
 	private Vector2 _velocity = new Vector2();
 	private bool _outOfControl = false;
 	private float _outOfControlTime = 0.0f;
+	private float _input = 0.0f;
 
 	protected override void GameUpdate(){
 
-		if(Application.platform == RuntimePlatform.WebGLPlayer || Application.isEditor)
-			PlayerInput = Input.GetAxis("Horizontal");
+		//if(Application.platform == RuntimePlatform.WebGLPlayer || Application.isEditor)
+		//	PlayerInput = Input.GetAxis("Horizontal");
+
+		_input = PlayerInput.Instance.UserInput;
 
 		//transform.Translate(new Vector2(((Vector2.right.x * HorizontalSpeed) * PlayerInput) * Time.deltaTime, 0), Space.World);
 
 		if(!_outOfControl){
-			_velocity = new Vector2(_velocity.x + ((HorizontalSpeed * PlayerInput) * Time.deltaTime), VerticalSpeed);
-			if(PlayerInput == 0)
+			_velocity = new Vector2(_velocity.x + ((HorizontalSpeed * _input) * Time.deltaTime), VerticalSpeed);
+			if(_input == 0)
 				_velocity = new Vector2(Mathf.Lerp(_velocity.x, 0, 4.5f * Time.deltaTime), _velocity.y);
 
 			_velocity = new Vector2(Mathf.Clamp(_velocity.x, -MaxHorizontalSpeed, MaxHorizontalSpeed), _velocity.y);
 
 			transform.position = new Vector2(transform.position.x + _velocity.x, transform.position.y + _velocity.y);
-			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0,0, -PlayerInput * 25f)), 3.0f * Time.deltaTime);
+			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0,0, -_input * 25f)), 3.0f * Time.deltaTime);
 
 		}
 		else{
@@ -49,10 +51,6 @@ public class PlayerMovement : MainBehaviour {
 
 			transform.position = new Vector2(Mathf.Clamp(transform.position.x, -HorizontalLimits, HorizontalLimits), transform.position.y);
 
-	}
-
-	public void InputButton(float input){
-		PlayerInput = input;
 	}
 
 	public void OutOfControl(Transform enemy){
