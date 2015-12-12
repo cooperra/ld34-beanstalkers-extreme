@@ -33,4 +33,8 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
+	public void InputButton(float input){
+		PlayerInput = input;
+	}
+
 }
