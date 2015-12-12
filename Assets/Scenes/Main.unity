@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VinePoint: {fileID: 1152197839}
-  Rate: 0.1
+  Rate: 0.05
   DownwardSpeed: -5
 --- !u!120 &1404858115
 LineRenderer:

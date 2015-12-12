@@ -16,7 +16,7 @@ public class VineGenerator : MainBehaviour {
 		_line = GetComponent<LineRenderer>();
 	}
 
-	protected override void GameUpdate(){
+	protected override void FixedGameUpdate(){
 
 		y -= DownwardSpeed * Time.deltaTime;
 

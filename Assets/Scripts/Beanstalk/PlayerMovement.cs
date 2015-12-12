@@ -42,6 +42,9 @@ public class PlayerMovement : MainBehaviour {
 				_outOfControl = false;
 
 			}
+			_velocity.y -= 0.05f * Time.deltaTime;
+			_velocity = new Vector2(Mathf.Clamp(_velocity.x, -MaxHorizontalSpeed, MaxHorizontalSpeed), Mathf.Clamp(_velocity.y, 0, VerticalSpeed));
+			transform.position = new Vector2(transform.position.x, transform.position.y + _velocity.y);
 		}
 
 			transform.position = new Vector2(Mathf.Clamp(transform.position.x, -HorizontalLimits, HorizontalLimits), transform.position.y);
@@ -57,7 +60,7 @@ public class PlayerMovement : MainBehaviour {
 		_outOfControl = true;
 
 		GetComponent<Rigidbody2D>().isKinematic = false;
-		GetComponent<Rigidbody2D>().AddForce(new Vector2((transform.position.x - enemy.transform.position.x) * 100,0));
+		GetComponent<Rigidbody2D>().AddForce(new Vector2((transform.position.x - enemy.transform.position.x) * 250,0));
 		_outOfControlTime = GameTime;
 
 	}
