@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StealthPlayer : MonoBehaviour {
+public class StealthPlayer : MainBehaviour{
 
-	// Use this for initialization
-	void Start () {
-	
+	private float _input = 0.0f;
+
+	protected override void GameUpdate(){
+
+		_input = PlayerInput.Instance.UserInput;
+
+		
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }
