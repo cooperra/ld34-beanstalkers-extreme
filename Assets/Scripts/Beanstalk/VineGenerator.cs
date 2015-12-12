@@ -10,15 +10,12 @@ public class VineGenerator : MainBehaviour {
 	private LineRenderer _line;
 	private float _lastCreated = 0.0f;
 	private int _points = 0;
-	private float y = 0;
 
 	void Start(){
 		_line = GetComponent<LineRenderer>();
 	}
 
 	protected override void FixedGameUpdate(){
-
-		y -= DownwardSpeed * Time.deltaTime;
 
 		if(GameTime >= _lastCreated + Rate){
 			_points++;
