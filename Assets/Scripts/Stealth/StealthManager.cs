@@ -8,10 +8,12 @@ public class StealthManager : MainBehaviour {
 	public bool CanStealth = false;
 
 	public float StealthSpeed = 2.0f;
+	public float StealthForgiveness = .25f;
+	public StealthPlayer Player;
 
 	public GameObject[] DebugLights;
 
-	private int _debugLightToPick = 0;
+	private int CurrentLight = 0;
 	private float _currentStealthSpeed = 0.0f;
 	private float _lastStealth = 0.0f;
 	private float _randomTime = 0.0f;
@@ -26,11 +28,15 @@ public class StealthManager : MainBehaviour {
 
 	protected override void GameUpdate(){
 
+		if(CurrentLight == 0)
+			if(!Player.Stealthed && GameTime >= _lastStealth + StealthForgiveness)	
+				DetectedPlayer();
+
 		if(GameTime >= _lastStealth + _randomTime){
 
-			_debugLightToPick = _debugLightToPick == 0 ? 1 : 0;
+			CurrentLight = CurrentLight == 0 ? 1 : 0;
 
-			if(_debugLightToPick == 0){
+			if(CurrentLight == 0){
 				DebugLights[0].GetComponent<SpriteRenderer>().color = Color.red;
 				DebugLights[1].GetComponent<SpriteRenderer>().color = Color.black;
 			}
@@ -44,6 +50,12 @@ public class StealthManager : MainBehaviour {
 			_lastStealth = GameTime;
 
 		}
+
+	}
+
+	void DetectedPlayer(){
+
+		Debug.Log("Player is detected!!");
 
 	}
 
