@@ -208,6 +208,7 @@ MonoBehaviour:
   HuhSounds:
   - {fileID: 8300000, guid: c2474d0ad25614287a5c8409f6fb71bf, type: 3}
   - {fileID: 8300000, guid: 7319a19ec8380425996888d633199346, type: 3}
+  GiantDiscoverySound: {fileID: 8300000, guid: 599faa4a30fec4c7fb7cc93079133e3c, type: 3}
 --- !u!1 &122448619
 GameObject:
   m_ObjectHideFlags: 0

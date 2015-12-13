@@ -19,6 +19,7 @@ public class StealthMinigame : MinigameBehavior {
 
 	public AudioClip[] FloorCreaks;
 	public AudioClip[] HuhSounds;
+	public AudioClip GiantDiscoverySound;
 
 	private int CurrentLight = 0;
 	private float _currentStealthSpeed = 0.0f;
@@ -29,6 +30,7 @@ public class StealthMinigame : MinigameBehavior {
 
 	private float _progressToLose = 0.0f;
 	private bool _started = false;
+	private bool _hasLost = false;
 
 	void Awake(){
 
@@ -117,8 +119,16 @@ public class StealthMinigame : MinigameBehavior {
 	}
 
 	void Lose(){
-
-		Debug.Log("YOU LOSE");
+		if (!_hasLost) {
+			Debug.Log("YOU LOSE");
+			// Play cranky giant sound
+			if (GiantDiscoverySound == null) {
+				Debug.LogWarning("No GiantDiscoverySound selected.", this);
+			} else {
+				AudioSource.PlayClipAtPoint(GiantDiscoverySound, Player.transform.position);
+			}
+			_hasLost = true;
+		}
 
 	}
 
