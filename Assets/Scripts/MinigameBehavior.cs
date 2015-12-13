@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class MinigameBehavior : MainBehaviour {
+public class MinigameBehavior : MainBehaviour {
 
 	private MinigameManager _minigameManager;
 	public GameObject[] NecessaryObjects;
