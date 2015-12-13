@@ -11,7 +11,7 @@ public class BeanstalkMinigame : MinigameBehavior {
 	// Start
 	void Start () {
 		if (_cloudHouseInstance == null) {
-			_cloudHouseInstance = Instantiate(CloudHouse, new Vector3(0, GoalHeight, 0), Quaternion.identity) as GameObject;
+			_cloudHouseInstance = Instantiate(CloudHouse, new Vector3(0, GoalHeight - 10, 0), Quaternion.identity) as GameObject;
 		}
 	}
 	

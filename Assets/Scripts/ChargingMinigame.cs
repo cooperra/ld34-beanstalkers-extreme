@@ -85,6 +85,7 @@ public class ChargingMinigame : MinigameBehavior {
 	private void EndingSetup(){
 
 		Baby.position = BabyStartPoint.position;
+		Baby.GetComponent<SpriteRenderer>().sortingOrder = -1;
 		_ended = true;
 
 	}

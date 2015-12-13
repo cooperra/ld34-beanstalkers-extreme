@@ -28,6 +28,8 @@ public class StealthMinigame : MinigameBehavior {
 	public AudioClip[] HuhSounds;
 	public AudioClip GiantDiscoverySound;
 
+	public GameObject BabbyPrefab;
+
 	private int CurrentLight = 0;
 	private float _currentStealthSpeed = 0.0f;
 	private float _lastStealth = 0.0f;
@@ -39,10 +41,20 @@ public class StealthMinigame : MinigameBehavior {
 	private bool _started = false;
 	private bool _hasLost = false;
 
+	private GameObject _babby;
+
 	void Awake(){
 
 		_currentStealthSpeed = StealthSpeed;
 		_giantInitialPos = Giant.localPosition;
+	}
+
+	void Start(){
+
+		if (_babby == null) {
+			_babby = Instantiate(BabbyPrefab, new Vector3(WinDistance + 2, 0, 0), Quaternion.identity) as GameObject;
+		}
+
 	}
 
 	protected override void GameUpdate(){
