@@ -18,6 +18,10 @@ public class TrashFall : MonoBehaviour {
 	
 		transform.position = new Vector2(transform.position.x, transform.position.y - (FallSpeed * Time.deltaTime));
 		transform.Rotate(new Vector3(0,0,(50 * _spinDirection) * Time.deltaTime));
+		if (transform.position.y < 0) {
+		    // Remove self on reaching the ground
+		    Destroy(this.gameObject);
+		}
 
 	}
 
