@@ -18,6 +18,7 @@ public class StealthMinigame : MinigameBehavior {
 	public float WinDistance = 25.0f;
 
 	public AudioClip[] FloorCreaks;
+	public AudioClip[] HuhSounds;
 
 	private int CurrentLight = 0;
 	private float _currentStealthSpeed = 0.0f;
@@ -57,6 +58,8 @@ public class StealthMinigame : MinigameBehavior {
 			if(CurrentLight == 0){
 				DebugLights[0].GetComponent<SpriteRenderer>().color = Color.red;
 				DebugLights[1].GetComponent<SpriteRenderer>().color = Color.black;
+				int random = Random.Range(0, HuhSounds.Length);
+				AudioSource.PlayClipAtPoint(HuhSounds[random], Player.transform.position);
 			}
 			else{
 				DebugLights[0].GetComponent<SpriteRenderer>().color = Color.black;
@@ -94,7 +97,7 @@ public class StealthMinigame : MinigameBehavior {
 		if(PlayerInput.Instance.UserInput > 0){
 			if(GameTime >= _timeSinceLastSound + 1.5f){
 				int random = Random.Range(0, FloorCreaks.Length);
-				AudioSource.PlayClipAtPoint(FloorCreaks[random], Player.transform.position);
+				AudioSource.PlayClipAtPoint(FloorCreaks[random], Player.transform.position, .35f);
 				_timeSinceLastSound = GameTime;
 			}
 		}
