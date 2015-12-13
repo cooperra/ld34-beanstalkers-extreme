@@ -18,6 +18,8 @@ public class StateManager : MonoBehaviour{
 
     public GameStates CurrentState { get; private set; }
 
+    public bool HasBabby = false;
+
 /*
     public GameObject RunningUI;
     public GameObject PauseUI;
