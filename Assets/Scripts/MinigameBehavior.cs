@@ -8,8 +8,8 @@ public abstract class MinigameBehavior : MainBehaviour {
 	public GameObject NextGame;
 
 	// Use this for initialization
-	public void Start () {
-		_minigameManager = GameObject.Find("Minigame Manager").GetComponent<MinigameManager>();
+	void Start () {
+		//_minigameManager = MinigameManager.Instance;
 		if (NextGame == null) {
 			Debug.Log("Warning: No next game set");
 		}
@@ -43,7 +43,8 @@ public abstract class MinigameBehavior : MainBehaviour {
 		if (NextGame == null) {
 			Debug.Log("ProceedNextGame, but no next game set");
 		} else {
-			_minigameManager.GetComponent<MinigameManager>().SetMinigame(NextGame);
+			//_minigameManager.SetMinigame(NextGame);
+			MinigameManager.Instance.SetMinigame(NextGame);
 		}
 	}
 

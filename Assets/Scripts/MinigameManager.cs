@@ -13,7 +13,14 @@ public class MinigameManager : MonoBehaviour {
 	// private Minigames _currentMinigame;
 	private GameObject _currentMinigame;
 	// private Dictionary<Minigames, GameObject> MinigameMap;
-
+	public static MinigameManager Instance {get; private set;}
+	
+	void Awake() {
+		if (Instance == null) {
+			Instance = this;
+		}
+	}
+	
 	// Use this for initialization
 	void Start () {
 		// _currentMinigame = Minigames.ASCENT;
