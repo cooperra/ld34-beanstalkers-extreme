@@ -28,6 +28,7 @@ public class StealthMinigame : MinigameBehavior {
 	private Vector3 _giantInitialPos;
 
 	private float _progressToLose = 0.0f;
+	private bool _started = false;
 
 	void Awake(){
 
@@ -36,6 +37,12 @@ public class StealthMinigame : MinigameBehavior {
 	}
 
 	protected override void GameUpdate(){
+
+		if(!_started){
+			if(PlayerInput.Instance.UserInput != 0)
+				_started = true;
+			return;
+		}
 
 		if(CurrentLight == 0){
 			Giant.transform.localPosition = Vector3.MoveTowards(Giant.localPosition, GiantMoveTo.localPosition, 35.0f * Time.deltaTime);

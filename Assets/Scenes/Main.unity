@@ -2888,6 +2888,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eba562323de5a4039b1d081d3b0ce7a0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1904639606
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 434274, guid: 58be06dbebcf048b2884a370093f3840, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 434274, guid: 58be06dbebcf048b2884a370093f3840, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 434274, guid: 58be06dbebcf048b2884a370093f3840, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 434274, guid: 58be06dbebcf048b2884a370093f3840, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 434274, guid: 58be06dbebcf048b2884a370093f3840, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 434274, guid: 58be06dbebcf048b2884a370093f3840, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 434274, guid: 58be06dbebcf048b2884a370093f3840, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 434274, guid: 58be06dbebcf048b2884a370093f3840, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 139164, guid: 58be06dbebcf048b2884a370093f3840, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 58be06dbebcf048b2884a370093f3840, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1946226981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,6 +3099,7 @@ MonoBehaviour:
   VerticalSpeed: 0.1
   HorizontalLimits: 3
   OutOfControlTimeLimit: 1
+  InvincibleTime: 2
 --- !u!61 &1965336801
 BoxCollider2D:
   m_ObjectHideFlags: 0

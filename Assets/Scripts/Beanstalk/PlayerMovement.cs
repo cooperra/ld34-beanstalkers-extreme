@@ -11,10 +11,16 @@ public class PlayerMovement : MainBehaviour {
 
 	public float OutOfControlTimeLimit = 3.0f;
 
+	public float InvincibleTime = 5.0f;
+
 	private Vector2 _velocity = new Vector2();
 	private bool _outOfControl = false;
 	private float _outOfControlTime = 0.0f;
 	private float _input = 0.0f;
+
+	private bool _invincible = false;
+	private float _invincibleStarted = 0.0f;
+
 
 	protected override void GameUpdate(){
 
@@ -40,7 +46,7 @@ public class PlayerMovement : MainBehaviour {
 			//transform.Rotate(new Vector3(0,0, 800 * Time.deltaTime));
 			if(GameTime >= _outOfControlTime + OutOfControlTimeLimit){
 				GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-				GetComponent<Rigidbody2D>().isKinematic = false;
+				GetComponent<Rigidbody2D>().isKinematic = true;
 				_outOfControl = false;
 
 			}
@@ -51,15 +57,23 @@ public class PlayerMovement : MainBehaviour {
 
 			transform.position = new Vector2(Mathf.Clamp(transform.position.x, -HorizontalLimits, HorizontalLimits), transform.position.y);
 
+			if(GameTime >= _invincibleStarted + InvincibleTime)
+				_invincible = false;
+
 	}
 
 	public void OutOfControl(Transform enemy){
 
+		if(_invincible)
+			return;
+
 		_outOfControl = true;
 
-		//GetComponent<Rigidbody2D>().isKinematic = false;
-		//GetComponent<Rigidbody2D>().AddForce(new Vector2((transform.position.x - enemy.transform.position.x) * 250,0));
+		GetComponent<Rigidbody2D>().isKinematic = false;
+		GetComponent<Rigidbody2D>().AddForce(new Vector2((Mathf.Ceil(transform.position.x - enemy.transform.position.x)) * 250,0));
 		_outOfControlTime = GameTime;
+		_invincibleStarted = GameTime;
+		_invincible = true;
 
 	}
 
