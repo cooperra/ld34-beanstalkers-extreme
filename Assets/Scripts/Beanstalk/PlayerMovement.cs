@@ -37,7 +37,7 @@ public class PlayerMovement : MainBehaviour {
 
 		}
 		else{
-			transform.Rotate(new Vector3(0,0, 800 * Time.deltaTime));
+			//transform.Rotate(new Vector3(0,0, 800 * Time.deltaTime));
 			if(GameTime >= _outOfControlTime + OutOfControlTimeLimit){
 				GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 				GetComponent<Rigidbody2D>().isKinematic = false;
@@ -57,8 +57,8 @@ public class PlayerMovement : MainBehaviour {
 
 		_outOfControl = true;
 
-		GetComponent<Rigidbody2D>().isKinematic = false;
-		GetComponent<Rigidbody2D>().AddForce(new Vector2((transform.position.x - enemy.transform.position.x) * 250,0));
+		//GetComponent<Rigidbody2D>().isKinematic = false;
+		//GetComponent<Rigidbody2D>().AddForce(new Vector2((transform.position.x - enemy.transform.position.x) * 250,0));
 		_outOfControlTime = GameTime;
 
 	}

@@ -16,7 +16,7 @@ public class VineGenerator : MainBehaviour {
 		_line = GetComponent<LineRenderer>();
 	}
 
-	protected override void FixedGameUpdate(){
+	protected override void GameUpdate(){
 
 		if(GameTime >= _lastCreated + Rate){
 			_points++;
