@@ -31,7 +31,7 @@ public class MinigameManager : MonoBehaviour {
 		// Debug.Log(MinigameMap[Minigames.SNEAK]);
 
 		_currentMinigame = GameObject.FindGameObjectsWithTag("Minigame")[0];
-		Debug.Log(_currentMinigame);
+
 	}
 	
 	// Update is called once per frame
