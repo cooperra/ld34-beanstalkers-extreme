@@ -13,9 +13,12 @@ public class TrashWoosh : MonoBehaviour {
 	
 	// }
 
+	public AudioClip[] WooshSounds;
+	private bool _hasWooshed = false; // Only woosh once per object
+
 	void OnTriggerEnter2D(Collider2D collider){
 
-		if(collider.name == "Player"){
+		if(collider.name == "Player" && !_hasWooshed){
 			Woosh();
 		}
 
@@ -24,5 +27,12 @@ public class TrashWoosh : MonoBehaviour {
 	private void Woosh() {
 		// Do audio
 		Debug.Log("Woosh!");
+		if (WooshSounds.Length == 0) {
+			Debug.LogWarning("No woosh sounds given.", this);
+		} else {
+			int random = Random.Range(0, WooshSounds.Length);
+			AudioSource.PlayClipAtPoint(WooshSounds[random], transform.position);
+		}
+		_hasWooshed = true;
 	}
 }

@@ -110,6 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a53e132b4e7487c97af79daca45a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WooshSounds:
+  - {fileID: 8300000, guid: 5def8c3e59ff24703b57b8c76aa597f3, type: 3}
+  - {fileID: 8300000, guid: ad725cdb9b3c34864a899f187222bd55, type: 3}
+  - {fileID: 8300000, guid: 8a8af59e7f50d4a27b799a6b7e3e395f, type: 3}
+  - {fileID: 8300000, guid: 9c6edcd0e750f4457a73df870e474cb9, type: 3}
+  - {fileID: 8300000, guid: 8bb4ca4b04fb6425aa942f8507a9a99f, type: 3}
+  - {fileID: 8300000, guid: 423e48099e167475bae61ad7f9f80113, type: 3}
 --- !u!114 &11456696
 MonoBehaviour:
   m_ObjectHideFlags: 1
