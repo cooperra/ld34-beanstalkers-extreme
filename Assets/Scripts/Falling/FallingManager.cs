@@ -22,7 +22,7 @@ public class FallingManager : MinigameBehavior {
 	protected override void GameUpdate(){
 
 		if(Vector3.Distance(Player.position, Ground.position) <= EndTrigger)
-			Debug.Log("End Minigame");
+			ProceedNextGame();
 
 	}
 
