@@ -78,22 +78,27 @@ public class ChargingMinigame : MinigameBehavior {
 	public Transform BabyEndPoint;
 	public Transform PlayerEndPoint;
 	public SpriteRenderer FadeSprite;
+	public Sprite slamSprite;
+
+	public Vector3 babbyScale;
 
 	public float EndingTime = 5.0f;
 	private float _endingTimer = 0.0f;
 
 	private void EndingSetup(){
 
-		Baby.position = BabyStartPoint.position;
-		Baby.GetComponent<SpriteRenderer>().sortingOrder = -1;
+		//Baby.position = BabyStartPoint.position;
+		//Baby.GetComponent<SpriteRenderer>().sortingOrder = -1;
+		Player.GetComponent<SpriteRenderer>().sprite = slamSprite;
 		_ended = true;
 
 	}
 
 	private void EndingUpdate(){
 
-		Baby.position = Vector3.MoveTowards(Baby.position, BabyEndPoint.position, 0.1f * Time.deltaTime);
+		Baby.position = Vector3.MoveTowards(Baby.position, BabyEndPoint.position, 1f * Time.deltaTime);
 		Baby.Rotate(new Vector3(0, 0, 45 * Time.deltaTime));
+		Baby.localScale = Vector3.Lerp(Baby.localScale, babbyScale, 1.0f * Time.deltaTime);
 
 		Player.position = Vector3.Lerp(Player.position, PlayerEndPoint.position, 1.0f * Time.deltaTime);
 		Ground.localScale = new Vector3(Ground.localScale.x + ((GrowSpeed * 3) * DeltaTime), Ground.localScale.y + ((GrowSpeed * 3) * DeltaTime), 1);
