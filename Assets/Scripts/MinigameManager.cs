@@ -39,7 +39,7 @@ public class MinigameManager : MonoBehaviour {
 
 
 	private void SwitchMinigame(GameObject old_m, GameObject new_m) {
-		old_m.SetActive(false);
-		new_m.SetActive(true);
+		old_m.GetComponent<MinigameBehavior>().Disable();
+		new_m.GetComponent<MinigameBehavior>().Enable();
 	}
 }
