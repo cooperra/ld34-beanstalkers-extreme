@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NecessaryObjects: []
-  NextGame: {fileID: 0}
+  NextGame: {fileID: 1129813646}
 --- !u!1 &122448619
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +343,64 @@ SpriteRenderer:
   m_Color: {r: 0.5661765, g: 0.33706453, b: 0.12905492, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &265168613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 265168614}
+  - 212: {fileID: 265168615}
+  m_Layer: 0
+  m_Name: beanstalkbottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &265168614
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265168613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3, y: -3.958, z: 0}
+  m_LocalScale: {x: 0.122983836, y: 0.122983836, z: 0.16397846}
+  m_Children: []
+  m_Father: {fileID: 356608551}
+  m_RootOrder: 0
+--- !u!212 &265168615
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265168613}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 237074bc872f84af6a808cce64fd4973, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &356608550
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +426,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 265168614}
   - {fileID: 1404858113}
   - {fileID: 1811809328}
   - {fileID: 381839634}
@@ -506,7 +565,7 @@ Transform:
   m_LocalScale: {x: 80, y: 25.726679, z: 1}
   m_Children: []
   m_Father: {fileID: 356608551}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!212 &381839635
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1221,7 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434f683a5f226482ba575b20d1a1c635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FallSpeed: 2
+  FallSpeed: 3
   HorizontalSpeed: 5
   HorizontalMaxSpeed: 2
   HorizontalLimits: 3
@@ -1382,7 +1441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.372}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1857,14 +1916,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455372308fce940e19002bc01eb2ec79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectsToDisable:
-  - {fileID: 1404858112}
+  NecessaryObjects:
+  - {fileID: 356608550}
+  NextGame: {fileID: 0}
   PlayerCam: {fileID: 1811809329}
   NewOffset: {x: 0, y: -2, z: -10}
   Player: {fileID: 739899451}
   OldPlayer: {fileID: 1965336798}
   Ground: {fileID: 381839634}
   EndTrigger: 15
+  vine: {fileID: 1404858114}
 --- !u!1 &1152197838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,7 +2207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.372}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2195,7 +2256,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 356608551}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &1404858114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2657,7 +2718,7 @@ Transform:
   - {fileID: 945253235}
   - {fileID: 510676603}
   m_Father: {fileID: 356608551}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1811809329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3050,7 +3111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.372}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

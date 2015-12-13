@@ -15,7 +15,7 @@ public abstract class MinigameBehavior : MainBehaviour {
 		}
 	}
 
-	public void Disable() {
+	public virtual void Disable() {
 		// disable all the things!
 		this.gameObject.SetActive(false);
 		foreach (GameObject o in NecessaryObjects) {
@@ -23,7 +23,7 @@ public abstract class MinigameBehavior : MainBehaviour {
 		}
 	}
 
-	public void Enable() {
+	public virtual void Enable() {
 		// reenable all the things!
 		this.gameObject.SetActive(true);
 		foreach (GameObject o in NecessaryObjects) {
