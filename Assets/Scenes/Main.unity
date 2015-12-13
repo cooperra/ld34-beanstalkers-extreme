@@ -172,7 +172,6 @@ Transform:
   - {fileID: 407878636}
   - {fileID: 648078697}
   - {fileID: 2071609562}
-  - {fileID: 372148294}
   - {fileID: 710032059}
   - {fileID: 894907704}
   - {fileID: 1946226982}
@@ -193,6 +192,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NecessaryObjects: []
   NextGame: {fileID: 1129813646}
+  CanStealth: 0
+  StealthSpeed: 5
+  StealthForgiveness: 0.5
+  Player: {fileID: 2071609564}
+  DebugLights:
+  - {fileID: 1157879697}
+  - {fileID: 43946085}
+  Giant: {fileID: 775686658}
+  GiantMoveTo: {fileID: 1111667871}
 --- !u!1 &122448619
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +320,7 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 69390173}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!212 &235459125
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -432,54 +440,6 @@ Transform:
   - {fileID: 1115439026}
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!1 &372148293
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 372148294}
-  - 114: {fileID: 372148295}
-  m_Layer: 0
-  m_Name: Stealth Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &372148294
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 372148293}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 69390173}
-  m_RootOrder: 3
---- !u!114 &372148295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 372148293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd393c293b2164e2490d350800e37f0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CanStealth: 0
-  StealthSpeed: 5
-  StealthForgiveness: 0.5
-  Player: {fileID: 2071609564}
-  DebugLights:
-  - {fileID: 43946085}
-  - {fileID: 1157879697}
-  Giant: {fileID: 775686658}
-  GiantMoveTo: {fileID: 1111667871}
 --- !u!1 &380328803
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +641,7 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 69390173}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!212 &579314598
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1060,7 +1020,7 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 69390173}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!212 &710032060
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1547,7 +1507,7 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 69390173}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!212 &894907705
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1917,7 +1877,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1152197838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.35, z: 0}
+  m_LocalPosition: {x: 0.013, y: -0.427, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965336798}
@@ -2238,7 +2198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VinePoint: {fileID: 1152197839}
-  Rate: 0.0001
+  Rate: 0.05
   DownwardSpeed: -5
   MaterialGrowthRate: 2
 --- !u!120 &1404858115
@@ -2812,7 +2772,7 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 69390173}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!212 &1946226983
 SpriteRenderer:
   m_ObjectHideFlags: 0
