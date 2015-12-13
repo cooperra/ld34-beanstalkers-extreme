@@ -33,7 +33,7 @@ public class PlayerMovement : MainBehaviour {
 			_velocity = new Vector2(Mathf.Clamp(_velocity.x, -MaxHorizontalSpeed, MaxHorizontalSpeed), _velocity.y);
 
 			transform.position = new Vector2(transform.position.x + _velocity.x, transform.position.y + _velocity.y);
-			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0,0, -_input * 35f)), 3.0f * Time.deltaTime);
+			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0,0, -_input * 45f)), 3.0f * Time.deltaTime);
 
 		}
 		else{

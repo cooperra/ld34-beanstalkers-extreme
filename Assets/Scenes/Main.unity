@@ -1208,6 +1208,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FallSpeed: 2
+  HorizontalSpeed: 5
+  HorizontalMaxSpeed: 2
+  HorizontalLimits: 3
 --- !u!1 &775686657
 GameObject:
   m_ObjectHideFlags: 0
