@@ -9,10 +9,16 @@ public class StealthMinigame : MinigameBehavior {
 	public float StealthForgiveness = .25f;
 	public StealthPlayer Player;
 
+	public float StepDuration = 0.75f;
+	public Sprite[] PlayerWalkingFrames;
+	private float _timeSinceLastStep = 0;
+	private int _currentStepFrame = 0;
+
 	public GameObject[] DebugLights;
 	public Transform Giant;
 	public Transform GiantMoveTo;
 	public Sprite AngryGiantSprite;
+	public Color GiantAngerColor = Color.red;
 
 	public float LoseSpeed = 1.0f;
 
@@ -82,7 +88,7 @@ public class StealthMinigame : MinigameBehavior {
 
 		}
 
-		Giant.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, _progressToLose);
+		Giant.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, GiantAngerColor, _progressToLose);
 
 		if(Player.transform.position.x >= WinDistance)
 			Win();
@@ -110,6 +116,18 @@ public class StealthMinigame : MinigameBehavior {
 				AudioSource.PlayClipAtPoint(FloorCreaks[random], Player.transform.position, .35f);
 				_timeSinceLastSound = GameTime;
 			}
+			if(GameTime >= _timeSinceLastStep + StepDuration && PlayerWalkingFrames.Length > 0){
+				_currentStepFrame += 1;
+				_currentStepFrame %= PlayerWalkingFrames.Length;
+				
+				Player.GetComponent<SpriteRenderer>().sprite = PlayerWalkingFrames[_currentStepFrame];
+				_timeSinceLastStep = GameTime;
+			}
+		} else {
+			// Reset delays when stopping
+			// This way, pressing a key always starts a sound/step
+			_timeSinceLastSound = 0;
+			_timeSinceLastStep = 0;
 		}
 
 	}
