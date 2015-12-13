@@ -192,6 +192,10 @@ MonoBehaviour:
   StealthSpeed: 5
   StealthForgiveness: .5
   Player: {fileID: 2071609564}
+  StepDuration: .5
+  PlayerWalkingFrames:
+  - {fileID: 21300000, guid: 2a33cb9730dd74c73b448e9f2aba38ec, type: 3}
+  - {fileID: 21300000, guid: baae813f80856430abeb3877326e9a9b, type: 3}
   DebugLights:
   - {fileID: 1157879697}
   - {fileID: 43946085}
