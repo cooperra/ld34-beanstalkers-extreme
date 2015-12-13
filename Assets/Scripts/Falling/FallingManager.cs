@@ -11,12 +11,21 @@ public class FallingManager : MinigameBehavior {
 	public float EndTrigger = 20f;
 	public VineGenerator vine;
 
+	public GameObject Baby;
+
 	public override void Enable(){
 		base.Enable();
 		PlayerCam.follow = Player;
 		Player.transform.position = OldPlayer.transform.position;
 		PlayerCam.offset = NewOffset;
 		vine.enabled = false;
+
+		if (Baby != null) {
+			Vector3 babypos = new Vector3();
+			babypos.x = OldPlayer.transform.position.x;
+			babypos.y = OldPlayer.transform.position.y - 10;
+			Baby.transform.position = OldPlayer.transform.position;
+		}
 	}
 
 	protected override void GameUpdate(){
