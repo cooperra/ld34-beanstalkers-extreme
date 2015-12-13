@@ -2528,7 +2528,7 @@ MonoBehaviour:
   thisCamera: {fileID: 617364761}
   ShakeRange: 0.25
   ShakeSpeed: 0.2
-  HitRate: 1.6
+  HitRate: 2.5
   DecayRate: 1
   ProgressDisplay: {fileID: 477625603}
   GoalTime: 3.5
