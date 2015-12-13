@@ -17,6 +17,8 @@ public class StealthMinigame : MinigameBehavior {
 
 	public float WinDistance = 25.0f;
 
+	public AudioClip[] FloorCreaks;
+
 	private int CurrentLight = 0;
 	private float _currentStealthSpeed = 0.0f;
 	private float _lastStealth = 0.0f;
@@ -72,6 +74,8 @@ public class StealthMinigame : MinigameBehavior {
 		if(Player.transform.position.x >= WinDistance)
 			Win();
 
+		SoundPlayer();
+
 	}
 
 	void DetectedPlayer(){
@@ -81,6 +85,19 @@ public class StealthMinigame : MinigameBehavior {
 
 		if(_progressToLose >= 1.0f)
 			Lose();
+
+	}
+
+	private float _timeSinceLastSound = 0.0f;
+	private void SoundPlayer(){
+
+		if(PlayerInput.Instance.UserInput > 0){
+			if(GameTime >= _timeSinceLastSound + 1.5f){
+				int random = Random.Range(0, FloorCreaks.Length);
+				AudioSource.PlayClipAtPoint(FloorCreaks[random], Player.transform.position);
+				_timeSinceLastSound = GameTime;
+			}
+		}
 
 	}
 

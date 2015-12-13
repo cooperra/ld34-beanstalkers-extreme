@@ -203,6 +203,12 @@ MonoBehaviour:
   GiantMoveTo: {fileID: 1111667871}
   LoseSpeed: 1
   WinDistance: 25
+  FloorCreaks:
+  - {fileID: 8300000, guid: 9a75f264b81ce4445b918eb0449d11e1, type: 3}
+  - {fileID: 8300000, guid: f92c48a856c0e4d9180607403ccb1abd, type: 3}
+  - {fileID: 8300000, guid: 90bf49e83963644e89ecea82d4c5079f, type: 3}
+  - {fileID: 8300000, guid: baaa4b1a77ba54a6caabe2546a15c614, type: 3}
+  - {fileID: 8300000, guid: 5be2873eb43a647079f37b92b0df0e56, type: 3}
 --- !u!1 &122448619
 GameObject:
   m_ObjectHideFlags: 0
