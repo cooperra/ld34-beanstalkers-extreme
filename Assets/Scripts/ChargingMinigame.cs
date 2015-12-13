@@ -101,7 +101,7 @@ public class ChargingMinigame : MinigameBehavior {
 		Baby.localScale = Vector3.Lerp(Baby.localScale, babbyScale, 1.0f * Time.deltaTime);
 
 		Player.position = Vector3.Lerp(Player.position, PlayerEndPoint.position, 1.0f * Time.deltaTime);
-		Ground.localScale = new Vector3(Ground.localScale.x + ((GrowSpeed * 3) * DeltaTime), Ground.localScale.y + ((GrowSpeed * 3) * DeltaTime), 1);
+		Ground.localScale = new Vector3(Ground.localScale.x + ((GrowSpeed * 5) * DeltaTime), Ground.localScale.y + ((GrowSpeed * 5) * DeltaTime), 1);
 
 		_endingTimer += Time.deltaTime;
 

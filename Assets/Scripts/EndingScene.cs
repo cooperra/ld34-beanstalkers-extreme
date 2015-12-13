@@ -26,6 +26,10 @@ public class EndingScene : MinigameBehavior {
 
 		if(GameTime >= _startTime + 4.0f)
 			FadeSprite.color = Color.Lerp(FadeSprite.color, Color.white, .75f * Time.deltaTime);
+
+
+		if(GameTime >= _startTime + 10f)
+			ProceedNextGame();
 	}
 
 }
