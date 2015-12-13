@@ -14,6 +14,7 @@ public class TrashGenerator : MainBehaviour {
 
 			GameObject obj = Instantiate(TrashObject, new Vector3(Random.Range(-3, 3), Player.transform.position.y + 10, 0), Quaternion.identity) as GameObject;
 			obj.transform.parent = transform.parent;
+			obj.GetComponent<TrashFall>().Player = Player;
 
 			_lastTime = GameTime;
 		}

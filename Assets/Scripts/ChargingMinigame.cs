@@ -33,6 +33,9 @@ public class ChargingMinigame : MinigameBehavior {
 
 		Ground.localScale = new Vector3(Ground.localScale.x + (GrowSpeed * DeltaTime), Ground.localScale.y + (GrowSpeed * DeltaTime), 1);
 
+		if(Ground.localScale.x >= 3.5f)
+			Lose();
+
 		if(Vector3.Distance(thisCamera.position, _shakePoint) <= .1f)
 			_shakePoint = new Vector3(Random.Range(-ShakeRange, ShakeRange), Random.Range(-ShakeRange, ShakeRange), -10);
 
@@ -61,6 +64,11 @@ public class ChargingMinigame : MinigameBehavior {
 
 		if(_goalTimer >= GoalTime)
 			EndingSetup();
+
+	}
+
+	void Lose(){
+		ProceedNextGame();
 
 	}
 

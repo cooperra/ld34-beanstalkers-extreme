@@ -39,6 +39,8 @@ public class FallingPlayer : MainBehaviour {
 
 		transform.position = new Vector2(Mathf.Clamp(transform.position.x, -HorizontalLimits, HorizontalLimits), transform.position.y);
 
+		transform.Rotate(new Vector3(0,0, 80 * Time.deltaTime));
+
 	}
 
 }

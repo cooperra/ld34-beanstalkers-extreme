@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TrashFall : MonoBehaviour {
+public class TrashFall : MainBehaviour {
 
 	public float FallSpeed = 5.0f;
+	public Transform Player;
 
 	private float _spinDirection = 0;
 
@@ -14,14 +15,17 @@ public class TrashFall : MonoBehaviour {
 
 	}
 
-	void Update () {
+	protected override void GameUpdate(){
 	
 		transform.position = new Vector2(transform.position.x, transform.position.y - (FallSpeed * Time.deltaTime));
 		transform.Rotate(new Vector3(0,0,(50 * _spinDirection) * Time.deltaTime));
-		if (transform.position.y < 0) {
+	
+		if(Vector3.Distance(transform.position, Player.position) >= 15.0f){
 		    // Remove self on reaching the ground
 		    Destroy(this.gameObject);
 		}
+
+
 
 	}
 
