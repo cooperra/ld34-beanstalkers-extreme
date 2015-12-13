@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21275132}
   - 61: {fileID: 6137284}
   - 114: {fileID: 11433510}
+  - 114: {fileID: 11481038}
   m_Layer: 0
   m_Name: Trahs
   m_TagString: Untagged
@@ -56,6 +57,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FallSpeed: 2.5
+--- !u!114 &11481038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8219ccf2602145b8b68630a80e92b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomSprites:
+  - {fileID: 21300000, guid: ed1ea15e4483e4b5e842015723ba76cd, type: 3}
+  - {fileID: 21300000, guid: 798c3fc8fbc054a9982eed0209ff9f30, type: 3}
 --- !u!212 &21275132
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -93,6 +108,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: RandomSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
