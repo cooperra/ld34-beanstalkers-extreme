@@ -12,6 +12,7 @@ public class StealthMinigame : MinigameBehavior {
 	public GameObject[] DebugLights;
 	public Transform Giant;
 	public Transform GiantMoveTo;
+	public Sprite AngryGiantSprite;
 
 	public float LoseSpeed = 1.0f;
 
@@ -127,6 +128,8 @@ public class StealthMinigame : MinigameBehavior {
 			} else {
 				AudioSource.PlayClipAtPoint(GiantDiscoverySound, Player.transform.position);
 			}
+			// Change giant sprite
+			Giant.GetComponent<SpriteRenderer>().sprite = AngryGiantSprite;
 			_hasLost = true;
 		}
 

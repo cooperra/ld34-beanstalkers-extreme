@@ -197,6 +197,7 @@ MonoBehaviour:
   - {fileID: 43946085}
   Giant: {fileID: 775686658}
   GiantMoveTo: {fileID: 1111667871}
+  AngryGiantSprite: {fileID: 21300000, guid: 8fe550a2bc1a344f5b2f5559c7da7625, type: 3}
   LoseSpeed: 1
   WinDistance: 12
   FloorCreaks:
@@ -1926,8 +1927,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 775686657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.6000004, y: 37.2000008, z: 0}
-  m_LocalScale: {x: 2.85714293, y: 2.85714293, z: 2.22222233}
+  m_LocalPosition: {x: 41.2000008, y: 67.6999969, z: 0}
+  m_LocalScale: {x: 1.59272707, y: 1.59272707, z: 1.23878789}
   m_Children: []
   m_Father: {fileID: 2071609562}
   m_RootOrder: 2
@@ -1955,7 +1956,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e0879a43f3a664301b54536dc5109330, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a0b298a2bb254de0bfe3f76379f2237, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &792401465
 GameObject:
@@ -2490,7 +2491,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1111667870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.6999998, y: 24.2000008, z: 0}
+  m_LocalPosition: {x: 14.6000004, y: 46.5, z: 0}
   m_LocalScale: {x: 2.85714293, y: 2.85714293, z: 2.22222233}
   m_Children: []
   m_Father: {fileID: 2071609562}
@@ -4312,8 +4313,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2071609561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.50999999, y: -2.13000011, z: 0}
-  m_LocalScale: {x: .349999994, y: .349999994, z: .449999988}
+  m_LocalPosition: {x: -1.88999999, y: -2.47000003, z: 0}
+  m_LocalScale: {x: .153957322, y: .153957322, z: .197945148}
   m_Children:
   - {fileID: 1157879698}
   - {fileID: 43946086}
@@ -4345,7 +4346,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 908c66610a519415fb22882ff428aeb3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a33cb9730dd74c73b448e9f2aba38ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &2071609564
 MonoBehaviour:
