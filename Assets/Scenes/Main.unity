@@ -198,6 +198,7 @@ MonoBehaviour:
   Giant: {fileID: 775686658}
   GiantMoveTo: {fileID: 1111667871}
   AngryGiantSprite: {fileID: 21300000, guid: 8fe550a2bc1a344f5b2f5559c7da7625, type: 3}
+  GiantAngerColor: {r: 1, g: .470588207, b: .470588207, a: 1}
   LoseSpeed: 1
   WinDistance: 12
   FloorCreaks:

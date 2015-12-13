@@ -13,6 +13,7 @@ public class StealthMinigame : MinigameBehavior {
 	public Transform Giant;
 	public Transform GiantMoveTo;
 	public Sprite AngryGiantSprite;
+	public Color GiantAngerColor = Color.red;
 
 	public float LoseSpeed = 1.0f;
 
@@ -82,7 +83,7 @@ public class StealthMinigame : MinigameBehavior {
 
 		}
 
-		Giant.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, _progressToLose);
+		Giant.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, GiantAngerColor, _progressToLose);
 
 		if(Player.transform.position.x >= WinDistance)
 			Win();
