@@ -69,6 +69,7 @@ public class ChargingMinigame : MinigameBehavior {
 	public Transform BabyStartPoint;
 	public Transform BabyEndPoint;
 	public Transform PlayerEndPoint;
+	public SpriteRenderer FadeSprite;
 
 	public float EndingTime = 5.0f;
 	private float _endingTimer = 0.0f;
@@ -83,12 +84,15 @@ public class ChargingMinigame : MinigameBehavior {
 	private void EndingUpdate(){
 
 		Baby.position = Vector3.MoveTowards(Baby.position, BabyEndPoint.position, 0.1f * Time.deltaTime);
-		Baby.Rotate(new Vector3(0, 0, 25 * Time.deltaTime));
+		Baby.Rotate(new Vector3(0, 0, 45 * Time.deltaTime));
 
 		Player.position = Vector3.Lerp(Player.position, PlayerEndPoint.position, 1.0f * Time.deltaTime);
 		Ground.localScale = new Vector3(Ground.localScale.x + ((GrowSpeed * 3) * DeltaTime), Ground.localScale.y + ((GrowSpeed * 3) * DeltaTime), 1);
 
 		_endingTimer += Time.deltaTime;
+
+		if(_endingTimer >= EndingTime * .75f)
+			FadeSprite.color = Color.Lerp(FadeSprite.color, Color.white, 5.0f * Time.deltaTime);
 
 		if(_endingTimer >= EndingTime)
 			ProceedNextGame();

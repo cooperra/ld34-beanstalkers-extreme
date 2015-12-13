@@ -8,6 +8,13 @@ public class EndingScene : MinigameBehavior {
 	public float ShakeSpeed = 5.0f;
 	public SpriteRenderer FadeSprite;
 	private Vector3 _shakePoint = new Vector3(0,0, -10);
+
+	private float _startTime = 0.0f;
+
+	public override void Enable(){
+		base.Enable();
+		_startTime = GameTime;
+	}
 	
 	protected override void GameUpdate(){
 		if(Vector3.Distance(thisCamera.position, _shakePoint) <= .1f)
@@ -15,6 +22,10 @@ public class EndingScene : MinigameBehavior {
 
 		thisCamera.position = Vector3.Lerp(thisCamera.position, _shakePoint, ShakeSpeed);
 
-		FadeSprite.color = Color.Lerp(FadeSprite.color, Color.white, 1.0f * Time.deltaTime);
+		
+
+		if(GameTime >= _startTime + 4.0f)
+			FadeSprite.color = Color.Lerp(FadeSprite.color, Color.white, .75f * Time.deltaTime);
 	}
+
 }
