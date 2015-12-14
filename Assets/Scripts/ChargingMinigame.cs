@@ -24,7 +24,17 @@ public class ChargingMinigame : MinigameBehavior {
 
 	private bool _ended = false;
 
+	public Transform babyHead;
+	private Vector3 _babyShakePoint = new Vector3(0,0,0);
+	public float BabyShakeRange = 2.0f;
+	public float BabyShakeSpeed = 5.0f;
+
 	protected override void GameUpdate(){
+
+		if(Vector3.Distance(babyHead.localPosition, _babyShakePoint) <= .1f)
+			_babyShakePoint = new Vector3(Random.Range(-BabyShakeRange, BabyShakeRange), Random.Range(-BabyShakeRange, BabyShakeRange), -10);
+
+		babyHead.localPosition = Vector3.Lerp(babyHead.localPosition, _babyShakePoint, BabyShakeSpeed * Time.deltaTime);
 
 		if(_ended){
 			EndingUpdate();
@@ -39,7 +49,7 @@ public class ChargingMinigame : MinigameBehavior {
 		if(Vector3.Distance(thisCamera.position, _shakePoint) <= .1f)
 			_shakePoint = new Vector3(Random.Range(-ShakeRange, ShakeRange), Random.Range(-ShakeRange, ShakeRange), -10);
 
-		thisCamera.position = Vector3.Lerp(thisCamera.position, _shakePoint, ShakeSpeed);
+		thisCamera.position = Vector3.Lerp(thisCamera.position, _shakePoint, ShakeSpeed * Time.deltaTime);
 
 		if(!_holding && PlayerInput.Instance.UserInput != 0){
 			_progress += HitRate * Time.deltaTime;
