@@ -23,7 +23,7 @@ public class FallingManager : MinigameBehavior {
 		if (Baby != null) {
 			Vector3 babypos = new Vector3();
 			babypos.x = OldPlayer.transform.position.x;
-			babypos.y = OldPlayer.transform.position.y - 10;
+			babypos.y = OldPlayer.transform.position.y - 100;
 			Baby.transform.position = OldPlayer.transform.position;
 		}
 	}

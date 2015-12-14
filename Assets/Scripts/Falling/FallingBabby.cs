@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FallingBaby : MainBehaviour {
+public class FallingBabby : MainBehaviour {
 
 	public float FallAcceleration = 1.0f; // per frame?
 	public float FallMaxSpeed = 2.0f;//3
