@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ParallaxManager : MonoBehaviour {
+public class ParallaxManager : MainBehaviour {
 
 	public float ScrollSpeed = .5f;
 	public Transform FarBG;

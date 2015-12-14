@@ -6,14 +6,20 @@ public class MinigameBehavior : MainBehaviour {
 	private MinigameManager _minigameManager;
 	public GameObject[] NecessaryObjects;
 	public GameObject NextGame;
+	public GameObject Tutorial;
+	protected bool _finishedTutorial = false;
+
+	void Awake(){
+		if(Tutorial != null)	Tutorial.SetActive(false);
+	}
 
 	// Use this for initialization
 	void Start () {
-		//_minigameManager = MinigameManager.Instance;
 		if (NextGame == null) {
 			Debug.Log("Warning: No next game set");
 		}
 	}
+
 
 	public virtual void Disable() {
 		// disable all the things!
@@ -29,15 +35,20 @@ public class MinigameBehavior : MainBehaviour {
 		foreach (GameObject o in NecessaryObjects) {
 			o.SetActive(true);
 		}
+
+		if(Tutorial != null){
+			Tutorial.SetActive(true);
+			StateManager.Instance.SetState(GameStates.PAUSED);
+		}
+
 	}
 
-	//public Init() {
-	//	// set it up!
-	//}
-
-	//public Reset() {
-	//	// reset it up!
-	//}
+	public void EndTutorial(){
+		if(Tutorial != null){
+			Tutorial.SetActive(false);
+			StateManager.Instance.SetState(GameStates.RUNNING);
+		}
+	}
 
 	public void ProceedNextGame() {
 		if (NextGame == null) {
@@ -47,5 +58,4 @@ public class MinigameBehavior : MainBehaviour {
 			MinigameManager.Instance.SetMinigame(NextGame);
 		}
 	}
-
 }
