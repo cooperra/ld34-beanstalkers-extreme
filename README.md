@@ -27,3 +27,13 @@ Allen-Michael Brower - \[[twitter](https://twitter.com/ambocclusion)]
 ### "Lego Construction":
 
 James Gissendaner Jr.
+
+## License
+
+All code is licensed under MIT. See /LICENSE.
+
+We retain all rights to all art assets (contained in /Assets/Art). Mainly, we don't want people re-publishing similar copies of the game on app stores. Contact us if you have ideas for a more novel use.
+
+We retain all rights to the music for the same reasons.
+
+The sound effects are licensed individually because many of them are freely available online. See /Assets/Sound. We'll add more details about this later.
