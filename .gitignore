@@ -22,3 +22,7 @@ sysinfo.txt
 
 # Backups
 *~
+
+# Sensitive Stuff
+ProjectSettings/UnityAdsSettings.asset
+ProjectSettings/UnityConnectSettings.asset
