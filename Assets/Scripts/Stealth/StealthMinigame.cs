@@ -163,7 +163,7 @@ public class StealthMinigame : MinigameBehavior {
 			Giant.GetComponent<SpriteRenderer>().sprite = AngryGiantSprite;
 			// Set no babby
 			StateManager.Instance.HasBabby = false;
-			Invoke("ProceedNextGame", 1.5f)
+			Invoke("ProceedNextGame", 1.5f);
 			_hasLost = true;
 		}
 
