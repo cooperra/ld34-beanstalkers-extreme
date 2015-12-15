@@ -85,6 +85,73 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11820325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 11820326}
+  - 212: {fileID: 11820328}
+  - 114: {fileID: 11820327}
+  m_Layer: 0
+  m_Name: trashbag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &11820326
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11820325}
+  m_LocalRotation: {x: 0, y: 0, z: -.69137758, w: .722493708}
+  m_LocalPosition: {x: 5.55147743, y: .3127608, z: 0}
+  m_LocalScale: {x: 2.39031768, y: 2.39031792, z: 2.39031768}
+  m_Children: []
+  m_Father: {fileID: 349776667}
+  m_RootOrder: 2
+--- !u!114 &11820327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11820325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be688fcdb55444361ad3a78f99c81d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsBaby: 0
+--- !u!212 &11820328
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11820325}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 88398bc85cc674ff287ac9c67aeea094, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &43776037
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +916,7 @@ Transform:
   m_Children:
   - {fileID: 831596645}
   - {fileID: 817649735}
+  - {fileID: 11820326}
   m_Father: {fileID: 617364761}
   m_RootOrder: 1
 --- !u!1 &354848464
@@ -2638,6 +2706,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 817649735}
   - 212: {fileID: 817649736}
+  - 114: {fileID: 817649737}
   m_Layer: 0
   m_Name: slambaby
   m_TagString: Untagged
@@ -2683,6 +2752,18 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3260bb1fa699d40abb7ebefb524ae87f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &817649737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 817649734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be688fcdb55444361ad3a78f99c81d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsBaby: 1
 --- !u!1 &820776414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,6 +2894,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 831596645}
   - 212: {fileID: 831596646}
+  - 114: {fileID: 831596647}
   m_Layer: 0
   m_Name: slambaby2
   m_TagString: Untagged
@@ -2858,6 +2940,18 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: f2f81e3d11f2448bab2315b24cf9cef4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &831596647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 831596644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be688fcdb55444361ad3a78f99c81d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsBaby: 1
 --- !u!1 &854387521
 GameObject:
   m_ObjectHideFlags: 0
@@ -3309,6 +3403,73 @@ Transform:
   - {fileID: 304165125}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1036581868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1036581869}
+  - 212: {fileID: 1036581870}
+  - 114: {fileID: 1036581871}
+  m_Layer: 0
+  m_Name: trashbag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1036581869
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036581868}
+  m_LocalRotation: {x: 0, y: 0, z: -.766208529, w: .642592072}
+  m_LocalPosition: {x: 7.69229364, y: -.50949657, z: 0}
+  m_LocalScale: {x: 2.66687751, y: 2.86282873, z: .61244601}
+  m_Children: []
+  m_Father: {fileID: 1990758324}
+  m_RootOrder: 2
+--- !u!212 &1036581870
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036581868}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 38
+  m_Sprite: {fileID: 21300000, guid: 88398bc85cc674ff287ac9c67aeea094, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1036581871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036581868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be688fcdb55444361ad3a78f99c81d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsBaby: 0
 --- !u!1 &1036791562
 GameObject:
   m_ObjectHideFlags: 0
@@ -3372,6 +3533,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1083358247}
   - 212: {fileID: 1083358248}
+  - 114: {fileID: 1083358249}
   m_Layer: 0
   m_Name: slambaby
   m_TagString: Untagged
@@ -3417,6 +3579,18 @@ SpriteRenderer:
   m_SortingOrder: 40
   m_Sprite: {fileID: 21300000, guid: 3260bb1fa699d40abb7ebefb524ae87f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1083358249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1083358246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be688fcdb55444361ad3a78f99c81d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsBaby: 1
 --- !u!1 &1111667870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4976,6 +5150,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1595042687}
   - 212: {fileID: 1595042688}
+  - 114: {fileID: 1595042689}
   m_Layer: 0
   m_Name: slambaby2
   m_TagString: Untagged
@@ -5021,6 +5196,18 @@ SpriteRenderer:
   m_SortingOrder: 39
   m_Sprite: {fileID: 21300000, guid: f2f81e3d11f2448bab2315b24cf9cef4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1595042689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1595042686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be688fcdb55444361ad3a78f99c81d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsBaby: 1
 --- !u!1 &1663557075
 GameObject:
   m_ObjectHideFlags: 0
@@ -5790,6 +5977,7 @@ Transform:
   m_Children:
   - {fileID: 1595042687}
   - {fileID: 1083358247}
+  - {fileID: 1036581869}
   m_Father: {fileID: 1129813647}
   m_RootOrder: 1
 --- !u!114 &1990758325
