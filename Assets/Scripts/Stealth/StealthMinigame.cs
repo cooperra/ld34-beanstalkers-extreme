@@ -146,6 +146,7 @@ public class StealthMinigame : MinigameBehavior {
 
 	void Win() {
 		Debug.Log("YOU WIN");
+		StateManager.Instance.HasBabby = true;
 		ProceedNextGame();
 	}
 
@@ -160,6 +161,9 @@ public class StealthMinigame : MinigameBehavior {
 			}
 			// Change giant sprite
 			Giant.GetComponent<SpriteRenderer>().sprite = AngryGiantSprite;
+			// Set no babby
+			StateManager.Instance.HasBabby = false;
+			Invoke("ProceedNextGame", 1.5f)
 			_hasLost = true;
 		}
 
