@@ -7,6 +7,7 @@ public class EndingScene : MinigameBehavior {
 	public float ShakeRange = 2.0f;
 	public float ShakeSpeed = 5.0f;
 	public SpriteRenderer FadeSprite;
+	public AudioClip Explosion;
 	private Vector3 _shakePoint = new Vector3(0,0, -10);
 
 	private float _startTime = 0.0f;
@@ -14,6 +15,7 @@ public class EndingScene : MinigameBehavior {
 	public override void Enable(){
 		base.Enable();
 		_startTime = GameTime;
+		AudioSource.PlayClipAtPoint(Explosion, Vector3.zero, .3f);
 	}
 	
 	protected override void GameUpdate(){
