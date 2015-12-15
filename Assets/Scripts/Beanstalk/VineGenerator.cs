@@ -14,6 +14,9 @@ public class VineGenerator : MainBehaviour {
 
 	void Start(){
 		_line = GetComponent<LineRenderer>();
+		_points++;
+		_line.SetVertexCount(_points);
+		_line.SetPosition(_points - 1, VinePoint.position);
 	}
 
 	protected override void GameUpdate(){
