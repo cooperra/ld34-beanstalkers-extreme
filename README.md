@@ -24,6 +24,10 @@ Robbie Cooper - \[[twitter](https://twitter.com/rcoop_)] \[[github](https://gith
 
 Allen-Michael Brower - \[[twitter](https://twitter.com/ambocclusion)]
 
+### Music:
+
+Noah Park
+
 ### "Lego Construction":
 
 James Gissendaner Jr.
