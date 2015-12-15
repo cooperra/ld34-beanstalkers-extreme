@@ -9,8 +9,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Ludum Dare 34
+  companyName: Ambient Developments
+  productName: Beanstalkers Extreme!
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
@@ -169,7 +169,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: a8b348e2eb78c444caff1b639460a576, type: 3}
       m_Width: 128
       m_Height: 128
   - m_BuildTarget: Android
