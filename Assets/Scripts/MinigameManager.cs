@@ -11,9 +11,11 @@ using System.Collections.Generic;
 public class MinigameManager : MonoBehaviour {
 
 	// private Minigames _currentMinigame;
+	public MinigameBehavior CurrentMinigame {get {return _currentMinigame.GetComponent<MinigameBehavior>();}}
 	private GameObject _currentMinigame;
 	// private Dictionary<Minigames, GameObject> MinigameMap;
 	public static MinigameManager Instance {get; private set;}
+	public bool TutorialShowing = false;
 	
 	void Awake() {
 		if (Instance == null) {

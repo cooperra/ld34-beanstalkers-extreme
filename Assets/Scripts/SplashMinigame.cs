@@ -3,10 +3,16 @@ using System.Collections;
 
 public class SplashMinigame : MinigameBehavior {
 
-	public void StartGame(){
+	private float _holdTime = 0.0f;
+	protected override void GameUpdate(){
 
-		ProceedNextGame();
+		if(PlayerInput.Instance.UserInput != 0)
+			_holdTime += Time.deltaTime;
+		else
+			_holdTime = 0.0f;
+
+		if(_holdTime >= 0.5f)
+			ProceedNextGame();
 
 	}
-
 }

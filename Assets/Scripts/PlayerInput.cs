@@ -16,7 +16,8 @@ public class PlayerInput : MainBehaviour {
 		UserInput = input;
 	}
 
-	protected override void GameUpdate(){
+	protected override void Update(){
+		base.Update();
 		if(Application.platform == RuntimePlatform.WebGLPlayer || Application.isEditor)
 			UserInput = Input.GetAxis("Horizontal");
 	}

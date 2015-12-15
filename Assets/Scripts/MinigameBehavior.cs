@@ -38,6 +38,7 @@ public class MinigameBehavior : MainBehaviour {
 
 		if(Tutorial != null){
 			Tutorial.SetActive(true);
+			MinigameManager.Instance.TutorialShowing = true;
 			StateManager.Instance.SetState(GameStates.PAUSED);
 		}
 
@@ -46,6 +47,7 @@ public class MinigameBehavior : MainBehaviour {
 	public void EndTutorial(){
 		if(Tutorial != null){
 			Tutorial.SetActive(false);
+			MinigameManager.Instance.TutorialShowing = false;
 			StateManager.Instance.SetState(GameStates.RUNNING);
 		}
 	}
