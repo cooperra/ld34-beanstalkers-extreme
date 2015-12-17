@@ -521,7 +521,7 @@ MonoBehaviour:
   AngryGiantSprite: {fileID: 21300000, guid: 8fe550a2bc1a344f5b2f5559c7da7625, type: 3}
   GiantAngerColor: {r: 1, g: 0.4705882, b: 0.4705882, a: 1}
   LoseSpeed: 1
-  WinDistance: 12
+  WinDistance: 10
   FloorCreaks:
   - {fileID: 8300000, guid: 9a75f264b81ce4445b918eb0449d11e1, type: 3}
   - {fileID: 8300000, guid: f92c48a856c0e4d9180607403ccb1abd, type: 3}
@@ -6516,9 +6516,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b93d045289a64b2a8f6cd0bcbc349e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalSpeed: 2.5
-  MaxHorizontalSpeed: 0.1
-  VerticalSpeed: 0.1
+  HorizontalSpeed: 20
+  MaxHorizontalSpeed: 2.5
+  VerticalSpeed: 10
   HorizontalLimits: 3
   OutOfControlTimeLimit: 0.75
   InvincibleTime: 1
