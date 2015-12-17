@@ -4,11 +4,11 @@ Ever have some really cruddy neighbors? Have they ever thrown their trash on you
 
 This game was made for Ludum Dare 34, a worldwide [72-hour game jam](http://ludumdare.com/compo/about-ludum-dare/).
 
-We'd really appreciate your support. [Please play and rate our game here!](http://ludumdare.com/compo/ludum-dare-34/?uid=58187) Thank you ^_^
+We'd really appreciate your support. [Please play and rate our game here!](http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=58187) Thank you ^_^
 
 We used both themes, _Two Button Controls_ and _Growth_. For the most part, we finished except a few little things such as some missing music.
 
-Beanstalkers Extreme is built with Unity, so it is cross-platform. We currently support web and Android, though Android runs slower right now. More platforms coming soon. [See our Ludum Dare page for links](http://ludumdare.com/compo/ludum-dare-34/?uid=58187).
+Beanstalkers Extreme is built with Unity, so it is cross-platform. We currently support web and Android, though Android runs slower right now. More platforms coming soon. [See our Ludum Dare page for links](http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=58187).
 
 ## Credits
 
