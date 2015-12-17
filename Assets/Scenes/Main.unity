@@ -41,7 +41,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -5030,8 +5030,8 @@ LineRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1404858112}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: de64a3e17719f413a806ba64969045df, type: 2}
   m_SubsetIndices: 
@@ -6517,8 +6517,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HorizontalSpeed: 20
-  MaxHorizontalSpeed: 2.5
-  VerticalSpeed: 10
+  MaxHorizontalSpeed: 4
+  VerticalSpeed: 8
   HorizontalLimits: 3
   OutOfControlTimeLimit: 0.75
   InvincibleTime: 1
