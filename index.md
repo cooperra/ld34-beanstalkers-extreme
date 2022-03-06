@@ -3,6 +3,7 @@
 
 # Beanstalkers Extreme
 
-[Please play and vote on our game here](http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=58187)!
-
-You might see a content warning, but that's just because the game features a baby giant and the end of the world.
+- [About Beanstalkers Extreme](https://cooperra.com/projects/2015-ld34/)
+- [Play in Browser](beanstalkers)
+- [Download Android Version](beanstalkers.apk)
+- [View Source Code](https://github.com/cooperra/ld34-beanstalkers-extreme/)
