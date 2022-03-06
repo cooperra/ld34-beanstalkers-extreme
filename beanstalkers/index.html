@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Beanstalkers Extreme!</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=338 height=600 style="width: 338px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/beanstalkers.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/beanstalkers.data.br",
+        frameworkUrl: "Build/beanstalkers.framework.js.br",
+        codeUrl: "Build/beanstalkers.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Ambient Developments",
+        productName: "Beanstalkers Extreme!",
+        productVersion: "1.07",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
